@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+        body {
+            margin: 10px;
+            font-size: larger;
+        }
+
+        canvas {
+            float: left;
+            background-image: url("./img/木纹2.jfif");
+            border: black 5px solid;
+        }
+
+        input {
+            width: 80px;
+            height: 80px;
+            font-size: larger;
+        }
+    </style>
+    <title>五子棋</title>
+</head>
+
+<body onload="drawRect()">
+    <div>
+        <canvas width="640" id="canvas" onmousedown="play(event)" height="640">你的浏览器不支持HTML5 canvas ，请使用 google chrome
+            浏览器 打开.
+        </canvas>
+    </div>
+    当前局时
+    <span id="clock" style="font-size: 3em">00:5:00:00</span>
+
+    <div id="button">
+        <!--   比赛已经进行
+           <input   type="text" value="00:00">  -->
+        白棋局时
+        <input type="text" value="00:00">
+        黑棋局时
+        <input type="text" value="00:00">
+        步时
+        <input type="text" value="00:00">
+        读秒
+        <input type="text" value="00:00">
+        <br>
+        <input id="开始" type="button" value="开始">
+        <input id="悔棋" type="button" value="悔棋">
+        <input id="暂停" type="button" value="暂停">
+        <input id="投降" type="button" value="投降">
+    </div>
+    <script src="./js/3.js"></script>
+</body>
+
+</html>
